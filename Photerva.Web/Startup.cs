@@ -44,6 +44,7 @@ namespace Photerva.Web
         {
             if (env.IsDevelopment())
             {
+                app.UseWebpackDevMiddleware();
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
                 app.UseDatabaseErrorPage();
@@ -59,6 +60,13 @@ namespace Photerva.Web
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "OnlyAction",
+                    template: "{action}",
+                    defaults: new { controller = "Home" }
+                );
+
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
