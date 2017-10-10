@@ -1,13 +1,13 @@
 <template>
   <div>
     <div id="mainCalendar"></div>
+    {{msg}}
   </div>
 </template>
 <script>
-import $ from "jquery";
-//import moment from 'moment';
-//import jQuery from 'jquery';
-//import fullCalendar from 'fullcalendar';
+//import $ from "jquery";
+  //import moment from 'moment';
+  //import fullCalendar from 'fullcalendar';
 export default {
   name: 'Home',
   data: function () {
@@ -17,8 +17,8 @@ export default {
   },
   methods: {
     drawCalendar: function () {
-
-      //alert(JSON.stringify(fullCalendar));
+      //debugger;
+      this.msg = moment().format('YYYY [escaped] YYYY');
 
       $('#mainCalendar').fullCalendar({
         //options

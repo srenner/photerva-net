@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 //import 'bootstrap'
+//window.moment = require('moment');
+//require('moment');
+//import 'moment'
 
 import MainCalendar from './components/MainCalendar.vue'
 Vue.component('main-calendar', MainCalendar)

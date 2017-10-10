@@ -15,6 +15,7 @@ module.exports = {
   ],
   entry: [
     'jquery',
+    'moment',
     { app: './src/main.js' }
   
   ],
@@ -29,7 +30,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'moment': 'moment/src/moment.js'
     }
   },
   module: {
