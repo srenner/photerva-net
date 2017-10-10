@@ -456,7 +456,8 @@ namespace Photerva.Web.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                //return RedirectToAction("Secure", "Home");
+                return Redirect("/Secure/"); //force trailing slash
             }
         }
 
