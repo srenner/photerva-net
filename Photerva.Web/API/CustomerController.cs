@@ -8,6 +8,7 @@ using Photerva.Lib.Models;
 using Microsoft.AspNetCore.Authorization;
 using Photerva.Lib.ViewModels;
 using Photerva.Lib.Extensions;
+using Microsoft.AspNetCore.Identity;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -17,19 +18,28 @@ namespace Photerva.Web.API
     [Route("api/[controller]")]
     public class CustomerController : Controller
     {
-        private readonly IPhotervaService _service;
+        public string UserID
+        {
+            get
+            {
+                return _userManager.GetUserId(User);
+            }
+        }
 
-        public CustomerController(IPhotervaService service)
+        private readonly IPhotervaService _service;
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public CustomerController(IPhotervaService service, UserManager<ApplicationUser> userManager)
         {
             _service = service;
+            _userManager = userManager;
         }
 
         // GET: api/values
         [HttpGet]
         public IEnumerable<CustomerViewModel> Get()
         {
-
-            return _service.GetCustomers("d975f4d2-7898-454d-8ecd-9f6d65554b69").ToViewModel();
+            return _service.GetCustomers(UserID).ToViewModel();
         }
 
         // GET api/values/5
