@@ -1,11 +1,13 @@
 <template>
   <div>
     <div id="mainCalendar"></div>
-
   </div>
 </template>
 <script>
-  import fullcalendar from 'fullcalendar'
+import $ from "jquery";
+//import moment from 'moment';
+//import jQuery from 'jquery';
+//import fullCalendar from 'fullcalendar';
 export default {
   name: 'Home',
   data: function () {
@@ -15,6 +17,9 @@ export default {
   },
   methods: {
     drawCalendar: function () {
+
+      //alert(JSON.stringify(fullCalendar));
+
       $('#mainCalendar').fullCalendar({
         //options
       });
@@ -24,13 +29,14 @@ export default {
 
   },
   activated: function () {
-    alert(JSON.stringify(fullcalendar))
-    debugger;
+    //alert(JSON.stringify(fullcalendar))
+    //debugger;
     this.drawCalendar();
   }
 }
 </script>
 
+<style src="fullcalendar/dist/fullcalendar.css"></style>
 <style scoped>
 
 </style>

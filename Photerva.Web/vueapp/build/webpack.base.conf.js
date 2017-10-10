@@ -9,10 +9,15 @@ function resolve (dir) {
 }
 
 module.exports = {
+  plugins: [
+    // ...
+
+  ],
   entry: [
-    { app: './src/main.js' },
-    'fullcalendar'
-  ,
+    'jquery',
+    { app: './src/main.js' }
+  
+  ],
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -24,8 +29,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'fullcalendar': 'fullcalendar/dist/fullcalendar.min.js'
+      '@': resolve('src')
     }
   },
   module: {

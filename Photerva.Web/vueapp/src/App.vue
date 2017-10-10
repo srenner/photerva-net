@@ -27,6 +27,7 @@
       <router-view />
     </keep-alive>
   </div>
+
 </template>
 
 <script>
@@ -39,8 +40,9 @@ export default {
     }
 }
 </script>
-
+<style src="bootstrap/dist/css/bootstrap.css"></style>
 <style>
+  
   body {
     padding-top: 5rem;
   }
