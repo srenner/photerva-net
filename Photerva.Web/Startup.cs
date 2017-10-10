@@ -35,6 +35,8 @@ namespace Photerva.Web
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IPhotervaService, PhotervaService>();
+            services.AddTransient<IPhotervaRepository, PhotervaRepository>();
 
             services.AddMvc();
         }

@@ -14,6 +14,8 @@ namespace Photerva.Lib.DataAccess
         {
         }
 
+        public DbSet<Models.Customer> Customer { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
