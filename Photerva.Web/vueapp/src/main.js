@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import MainCalendar from './components/MainCalendar.vue'
+Vue.component('main-calendar', MainCalendar)
 
 Vue.config.productionTip = true
 
