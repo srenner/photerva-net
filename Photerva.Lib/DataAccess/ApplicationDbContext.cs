@@ -15,6 +15,7 @@ namespace Photerva.Lib.DataAccess
         }
 
         public DbSet<Models.Customer> Customer { get; set; }
+        public DbSet<SessionType> SessionType { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
