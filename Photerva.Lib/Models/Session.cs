@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Photerva.Lib.Models
@@ -14,13 +15,17 @@ namespace Photerva.Lib.Models
         public int CustomerID { get; set; }
         public Customer Customer { get; set; }
 
-        public decimal QuotedPrice { get; set; }
-        public decimal FinalPrice { get; set; }
+        [Column(TypeName = "Money")]
+        public decimal? QuotedPrice { get; set; }
+        [Column(TypeName = "Money")]
+        public decimal? FinalPrice { get; set; }
+        [Column(TypeName = "Money")]
+        public decimal? Expenses { get; set; }
 
-        public TimeSpan ShootTime { get; set; }
-        public TimeSpan EditTime { get; set; }
+        public TimeSpan? ShootTime { get; set; }
+        public TimeSpan? EditTime { get; set; }
 
-        public DateTime ScheduledDate { get; set; }
+        public DateTime? ScheduledDate { get; set; }
         public DateTime? BackupDate { get; set; }
 
         public string Notes { get; set; }

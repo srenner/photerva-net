@@ -11,9 +11,10 @@ using System;
 namespace Photerva.Lib.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171011192050_Session")]
+    partial class Session
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,24 +219,24 @@ namespace Photerva.Lib.Migrations
 
                     b.Property<bool>("Deleted");
 
-                    b.Property<TimeSpan?>("EditTime");
+                    b.Property<TimeSpan>("EditTime");
 
-                    b.Property<decimal?>("Expenses")
+                    b.Property<decimal>("Expenses")
                         .HasColumnType("Money");
 
-                    b.Property<decimal?>("FinalPrice")
+                    b.Property<decimal>("FinalPrice")
                         .HasColumnType("Money");
 
                     b.Property<string>("Notes");
 
-                    b.Property<decimal?>("QuotedPrice")
+                    b.Property<decimal>("QuotedPrice")
                         .HasColumnType("Money");
 
-                    b.Property<DateTime?>("ScheduledDate");
+                    b.Property<DateTime>("ScheduledDate");
 
                     b.Property<int>("SessionTypeID");
 
-                    b.Property<TimeSpan?>("ShootTime");
+                    b.Property<TimeSpan>("ShootTime");
 
                     b.HasKey("SessionID");
 
