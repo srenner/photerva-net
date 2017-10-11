@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photerva.Web", "Photerva.Web\Photerva.Web.csproj", "{EBABF5AC-878A-483E-BBF7-5D93F160727C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photerva.Web", "Photerva.Web\Photerva.Web.csproj", "{EBABF5AC-878A-483E-BBF7-5D93F160727C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photerva.Lib", "Photerva.Lib\Photerva.Lib.csproj", "{AB5D9A0A-1491-45CF-86A0-9F62FEAAE16C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photerva.Lib", "Photerva.Lib\Photerva.Lib.csproj", "{AB5D9A0A-1491-45CF-86A0-9F62FEAAE16C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photerva.Test", "Photerva.Test\Photerva.Test.csproj", "{033A9140-8355-44E9-8B53-9F988450E5DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photerva.Test", "Photerva.Test\Photerva.Test.csproj", "{033A9140-8355-44E9-8B53-9F988450E5DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4EF70CE6-3AF3-4349-A197-8B3ECC7F6B0A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
