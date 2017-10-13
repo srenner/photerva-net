@@ -8,5 +8,6 @@ namespace Photerva.Lib.DataAccess
     public interface IPhotervaRepository
     {
         List<Customer> GetCustomers(string ownerID);
+        List<Session> GetSessions(string ownerID, DateTime? startDate, DateTime? endDate);
     }
 }

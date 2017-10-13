@@ -20,5 +20,10 @@ namespace Photerva.Lib.Logic
             return _repo.GetCustomers(ownerID);
         }
 
+        public List<Session> GetSessions(string ownerID, DateTime? startDate, DateTime? endDate)
+        {
+            return _repo.GetSessions(ownerID, startDate, endDate);
+        }
+
     }
 }

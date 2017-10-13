@@ -33,5 +33,8 @@ namespace Photerva.Lib.Models
 
         public DateTime DateAdded { get; set; }
         public DateTime DateUpdated { get; set; }
+
+        public string OwnerID { get; set; }
+        public ApplicationUser Owner { get; set; }
     }
 }

@@ -27,5 +27,19 @@ namespace Photerva.Lib.DataAccess
                 throw;
             }
         }
+
+        public List<Session> GetSessions(string ownerID, DateTime? startDate, DateTime? endDate)
+        {
+            try
+            {
+                return _context.Session
+                    .Where(w => w.OwnerID == ownerID)
+                    .ToList();
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
     }
 }

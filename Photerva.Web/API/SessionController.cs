@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Photerva.Lib.Logic;
 using Microsoft.AspNetCore.Identity;
 using Photerva.Lib.Models;
+using Photerva.Lib.ViewModels;
+using System.Globalization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -33,9 +35,26 @@ namespace Photerva.Web.API
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Session> Get()
         {
-            return new string[] { "value1", "value2" };
+            var query = this.Request.Query;
+            if(query.Keys.Count > 0)
+            {
+                //todo handle bad input
+                DateRange range = new DateRange();
+                if(query.ContainsKey("startDate"))
+                {
+                    string strStartDate = query["startDate"];
+                    range.StartDate = DateTime.ParseExact(strStartDate, "yyyyMMdd", CultureInfo.InvariantCulture);
+                }
+                if(query.ContainsKey("endDate"))
+                {
+                    string strEndDate = query["endDate"];
+                    range.EndDate = DateTime.ParseExact(strEndDate, "yyyyMMdd", CultureInfo.InvariantCulture);
+                }
+            }
+
+            throw new NotImplementedException();
         }
 
         // GET api/values/5
