@@ -1,13 +1,13 @@
 <template>
   <div>
     <div id="mainCalendar"></div>
-    {{msg}}
   </div>
 </template>
 <script>
+//save for when i can fix webpack config
 //import $ from "jquery";
-  //import moment from 'moment';
-  //import fullCalendar from 'fullcalendar';
+//import moment from 'moment';
+//import fullCalendar from 'fullcalendar';
 export default {
   name: 'Home',
   data: function () {
@@ -17,9 +17,6 @@ export default {
   },
   methods: {
     drawCalendar: function () {
-      //debugger;
-      this.msg = moment().format('YYYY [escaped] YYYY');
-
       $('#mainCalendar').fullCalendar({
         //options
       });
@@ -29,8 +26,6 @@ export default {
 
   },
   activated: function () {
-    //alert(JSON.stringify(fullcalendar))
-    //debugger;
     this.drawCalendar();
   }
 }
