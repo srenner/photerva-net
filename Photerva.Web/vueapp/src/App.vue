@@ -23,9 +23,11 @@
         </form>
       </div>
     </nav>
-    <keep-alive>
-      <router-view />
-    </keep-alive>
+    <div class="container-fluid">
+      <keep-alive>
+        <router-view />
+      </keep-alive>
+    </div>
   </div>
 
 </template>
