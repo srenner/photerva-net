@@ -19,6 +19,9 @@ export default {
     drawCalendar: function () {
       $('#mainCalendar').fullCalendar({
         //options
+        events: function (start, end, timezone, callback) {
+          //debugger;
+        }
       });
     }
   },
